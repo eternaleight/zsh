@@ -1,5 +1,4 @@
 #zshrc
-
 #ghq command
 function peco-src () {
   local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
@@ -43,14 +42,16 @@ alias l80='open http://localhost:8080'
 alias n='nvim'
 alias ns='npm start'
 alias nd='npm run dev'
-alias nc='npx create-react-app --template typescript'
+alias nr='npx create-react-app --template typescript 00001 && cd 00001 && npm install -D tailwindcss@latest postcss@latest autoprefixer@latest && npx tailwindcss init -p'
+alias nn='npx create-next-app -e with-tailwindcss --use-npm'
 alias nu='n ~/.config/nvim/UltiSnips/all.snippets'
-alias nz='n ~/.zshrc'
+alias zh='n ~/.zshrc'
 alias so='source ~/.zshrc'
 alias sa='sass --watch style.scss:style.css'
 alias st='sass --style expanded style.scss:style.css'
 alias ts='tmux source-file ~/.tmux.conf'
-alias yc='yarn create next-app -e with-tailwindcss'
+alias yr='yarn create react-app --template typescript'
+alias yn='yarn create next-app -e with-tailwindcss'
 alias yd='yarn dev'
 alias ys='yarn start'
 alias zb='open https://zenn.dev/dashboard/deploys'
